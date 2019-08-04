@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Container, Card, Divider } from "semantic-ui-react";
+
+import PageTitle from "./Components/Header";
+import ToDo from "./Components/Todo";
+
+// import "./App.scss";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Container>
+        <PageTitle />
+      </Container>
+      <Divider />
+      <Container>
+        <Card.Group itemsPerRow={4}>
+          <ToDo />
+        </Card.Group>
+      </Container>
+    </Container>
   );
 }
 
